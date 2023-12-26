@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    android:compileSdkVersion="33"
+    android:compileSdkVersionCodename="13"
+    package="eu.xiaomi.module.inject"
+    platformBuildVersionCode="33"
+    platformBuildVersionName="13"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <application
+        android:hasCode="false"
+        android:allowBackup="false">
+        <meta-data
+            android:name="eu.xiaomi.module.inject.FIELDS"
+            android:resource="@xml/inject_fields" />
+    </application>
+</manifest>

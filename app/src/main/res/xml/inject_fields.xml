@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<inject-fields
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <trigger
+        name="com.google.android.gms">
+        <filter
+            pattern="(?i).*droidguard.*"
+            type="service">
+            <class
+                name="android.os.Build">
+                <field
+                    name="MANUFACTURER"
+                    type="string"
+                    value="Archos" />
+                <field
+                    name="BRAND"
+                    type="string"
+                    value="archos" />
+                <field
+                    name="DEVICE"
+                    type="string"
+                    value="ac70dti" />
+                <field
+                    name="PRODUCT"
+                    type="string"
+                    value="MTKAC70DTI" />
+                <field
+                    name="MODEL"
+                    type="string"
+                    value="Archos 70d Titanium" />
+                <field
+                    name="FINGERPRINT"
+                    type="string"
+                    value="archos/MTKAC70DTI/ac70dti:7.0/NRD90M/20170602.033254:user/release-keys" />
+            </class>
+            <class
+                name="android.os.Build$VERSION">
+                <field
+                    name="SECURITY_PATCH"
+                    type="string"
+                    value="2017-05-01" />
+                <field
+                    name="DEVICE_INITIAL_SDK_INT"
+                    type="int"
+                    value="24" />
+            </class>
+        </filter>
+    </trigger>
+</inject-fields>
