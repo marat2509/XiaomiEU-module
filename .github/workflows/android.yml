@@ -27,15 +27,15 @@ jobs:
       run: |
           ./gradlew assembleRelease
           # jarsigner -verbose -keystore ~/.config/.android/debug.keystore -storepass android -keypass android app/build/outputs/apk/release/app-release-unsigned.apk androiddebugkey
-          apksigner sign --ks ~/.config/.android/debug.keystore --ks-key-alias androiddebugkey --ks-pass pass:android app/build/outputs/apk/release/app-release-unsigned.apk
-          mv app/build/outputs/apk/release/app-release-unsigned.apk app/build/outputs/apk/release/app-release.apk
+          # apksigner sign --ks ~/.config/.android/debug.keystore --ks-key-alias androiddebugkey --ks-pass pass:android app/build/outputs/apk/release/app-release-unsigned.apk
+          # mv app/build/outputs/apk/release/app-release-unsigned.apk app/build/outputs/apk/release/app-release.apk
     - name: Sort files
       run: |
           mkdir output
-          mv app/build/outputs/apk/release/app-release.apk output
+          mv app/build/outputs/apk/release/app-release*.apk output
     - name: Upload release
       uses: actions/upload-artifact@v3
       with:
         name: app-release.zip
-        path: output/app-release.*
+        path: output/app-release*.*
         if-no-files-found: error
