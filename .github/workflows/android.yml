@@ -5,6 +5,7 @@ on:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
+  workflow_dispatch:
 
 jobs:
   build:
@@ -36,6 +37,6 @@ jobs:
     - name: Upload release
       uses: actions/upload-artifact@v3
       with:
-        name: app-release.zip
+        name: release.zip
         path: output/app-release*.*
         if-no-files-found: error
