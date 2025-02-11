@@ -11,6 +11,7 @@ jobs:
   build:
 
     runs-on: codeberg-tiny
+    container: ghcr.io/catthehacker/ubuntu:full-latest
 
     steps:
     - uses: https://github.com/actions/checkout@v4
